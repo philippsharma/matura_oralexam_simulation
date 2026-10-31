@@ -1,17 +1,27 @@
-import { useState } from 'react'
 import {
-  ConversationProvider, 
+  ConversationProvider,
   useConversationControls,
   useConversationStatus
 } from "@elevenlabs/react"
 
 import './App.css'
 
+const excerpt: string = `
+
+En équilibre sur le fil que Louise venait de tendre, les mains serrées sur le balancier, j'ai regardé devant moi, l'oeil fixé sur la fin de son récit.
+Louise venait enfin de prononcer le nom de Simon. Il faisait la première apparition officielle, après s'être glissé dans tous ces images, 
+lutteurs anonymes, garçons brutaux, tyrans de cour de récréation. Le frère que je m'étais inventé, celui qui avait rompu ma solitude, ce grand frêre fantôme 
+avait donc existé. Louise l'avait connu, aimé. Avant d'être le mien, Joseph avait été son grand-père, Georges, Esther, Marcel, Elise, sa famille proche. Avant de 
+devenir ma mère, Tania avait été sa tante. Comment l'appelait il, quels gestes avait-elle pour lui?
+`
+
 function App() {
 
   return (
     <>
-      <ConversationProvider>
+      <ConversationProvider
+       onError={(error) => console.error("Conversation error:", error)}
+      >
         <Agent/>
       </ConversationProvider>
     </>
@@ -25,7 +35,9 @@ function Agent(){
     return <button onClick={endSession}>End</button>
   }
   else {
-    return <button onClick={()=>startSession({agentId: "agent_3401m621cenrf8fvmvmy2adkfhzv"})}>
+    return <button onClick={()=>startSession({agentId: "agent_3401m621cenrf8fvmvmy2adkfhzv", dynamicVariables: {
+      excerpt: excerpt
+    }})}>
       Start
     </button>
   }
