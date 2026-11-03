@@ -3,11 +3,11 @@ This tool provides the possibility of simulating the Matura Oral Exam in French.
 
 Tool description: 
 
-A simulator of the matura oral examination in French for people with German as first language. Exam sequence and evaluation are in accordance with the guidelines for the Swiss Matura Exam with German as first language (Richtlinien für die schweizerische Maturitätsprüfung - Erstsprache Deutsch, RFSM). It follows the exam sequence as defined for the "standard" level. The exam centers around a randomly chosen excerpt from a chosen literature work. The student gets preparation time to look at the excerpt, and then is asked questions about it. Hume Live Call AI agent takes on the role of the examiner. At the end of the exam, a performance evaluation is provided which is based on the Swiss Matura exam guidelines.  
+A simulator of the matura oral examination in French for people with German as first language. Exam sequence and evaluation are in accordance with the guidelines for the Swiss Matura Exam with German as first language (Richtlinien für die schweizerische Maturitätsprüfung - Erstsprache Deutsch, RFSM). It follows the exam sequence as defined for the "standard" level. The exam centers around a randomly chosen excerpt from a chosen literature work. The student gets preparation time to look at the excerpt, and then is asked questions about it. ElevenLabs voice agent takes on the role of the examiner. At the end of the exam, a performance evaluation is provided which is based on the Swiss Matura exam guidelines.  
 
 Features: Must have
 
-- Live Call interaction with Hume AI, with automatic turn taking -> working microphone connection, audio processing and audio output is needed
+- Live Call interaction with agent, with automatic turn taking -> working microphone connection, audio processing and audio output is needed -> WORKS ✓
 - Excerpt is randomly chosen and displayed -> Excerpts need to be stored
 - Evaluation based on RFSM -> transcript needs to be processed by AI agent. This enables evaluation on many aspects but not fluency, which would need a different approach.
 - context file for accurate questions about the work
@@ -33,6 +33,9 @@ Features: cut
 - Multiple languages
 - Pronunciation evaluation
 
+ElevenLabs agent: 
+
+The agent works through a audio input -> transcription -> processing -> reponse as text -> text read out pipeline. Thus the students input is always transcribed into text before the agent sees it. Certain aspects such as intonation, pronunciation etc. cannot be processed by the agent. 
 
 Exam flow:
 

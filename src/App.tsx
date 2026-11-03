@@ -28,16 +28,25 @@ function App() {
   )
 }
 
+
+
 function Agent(){
   const {startSession, endSession} = useConversationControls()
   const {status} = useConversationStatus()
+
+  async function start() {
+    const res = await fetch("/api/token")
+    const {token} = await res.json()
+    startSession({conversationToken: token,
+    dynamicVariables: {excerpt: excerpt}
+  })}
+  
+
   if (status === "connected"){
     return <button onClick={endSession}>End</button>
   }
   else {
-    return <button onClick={()=>startSession({agentId: "agent_3401m621cenrf8fvmvmy2adkfhzv", dynamicVariables: {
-      excerpt: excerpt
-    }})}>
+    return <button onClick={start}>
       Start
     </button>
   }
