@@ -1,10 +1,14 @@
-import {
-  ConversationProvider,
-  useConversationControls,
-  useConversationStatus
-} from "@elevenlabs/react"
 
 import './App.css'
+
+import {ConversationProvider} from "@elevenlabs/react"
+import {useState} from "react"
+
+import Agent from "./components/Agent.tsx"
+import CodeForm from "./components/CodeForm.tsx"
+import getToken from "./api/getToken.ts"
+
+
 
 const excerpt: string = `
 
@@ -15,41 +19,43 @@ avait donc existé. Louise l'avait connu, aimé. Avant d'être le mien, Joseph a
 devenir ma mère, Tania avait été sa tante. Comment l'appelait il, quels gestes avait-elle pour lui?
 `
 
+
+
 function App() {
+
+  const [code, setCode] = useState("")
+  const [error, setError] = useState("")
+
+  async function saveCode(formData: FormData): Promise<void> {
+    const code = formData.get("code");
+    if (typeof code != "string") return;
+    setCode(code)
+    try {
+      const token = await getToken()
+      if (!token) throw new Error
+    } catch (e){
+      setCode("")
+    }
+  }
+
 
   return (
     <>
       <ConversationProvider
        onError={(error) => console.error("Conversation error:", error)}
       >
-        <Agent/>
+        {code ? <Agent getToken={getToken}/> : <CodeForm onAction={saveCode}/>}
+        {error ? <ErrorText error={error}/> : null}
+        
       </ConversationProvider>
     </>
   )
 }
 
+function ErrorText({error}: {error: string}) {
+  return <p>{error}</p>
+}
 
 
-function Agent(){
-  const {startSession, endSession} = useConversationControls()
-  const {status} = useConversationStatus()
-
-  async function start() {
-    const res = await fetch("/api/token")
-    const {token} = await res.json()
-    startSession({conversationToken: token,
-    dynamicVariables: {excerpt: excerpt}
-  })}
-  
-
-  if (status === "connected"){
-    return <button onClick={endSession}>End</button>
-  }
-  else {
-    return <button onClick={start}>
-      Start
-    </button>
-  }
-} 
 
 export default App
