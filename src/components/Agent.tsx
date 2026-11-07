@@ -1,5 +1,4 @@
 import {
-  ConversationProvider,
   useConversationControls,
   useConversationStatus
 } from "@elevenlabs/react"

@@ -8,6 +8,7 @@ import Agent from "./components/Agent.tsx"
 import CodeForm from "./components/CodeForm.tsx"
 import getToken from "./api/getToken.ts"
 
+import type {TokenResult} from "./api/getToken.ts"
 
 
 const excerpt: string = `
@@ -23,19 +24,19 @@ devenir ma mère, Tania avait été sa tante. Comment l'appelait il, quels geste
 
 function App() {
 
-  const [code, setCode] = useState("")
-  const [error, setError] = useState("")
+  const [code, setCode] = useState("");
+  const [error, setError] = useState("");
 
   async function saveCode(formData: FormData): Promise<void> {
     const code = formData.get("code");
     if (typeof code != "string") return;
-    setCode(code)
-    try {
-      const token = await getToken()
-      if (!token) throw new Error
-    } catch (e){
-      setCode("")
+    
+    const result: TokenResult = await getToken(code)
+    if (result.ok) {
+      setCode(code);
+      setError("");
     }
+    else setError(result.reason);
   }
 
 
