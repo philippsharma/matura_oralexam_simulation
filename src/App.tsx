@@ -7,8 +7,9 @@ import {useState} from "react"
 import Agent from "./components/Agent.tsx"
 import CodeForm from "./components/CodeForm.tsx"
 import getToken from "./api/getToken.ts"
+import { germanErrorMsg } from './texts.ts'
 
-import type {TokenResult} from "./api/getToken.ts"
+import type {TokenResult, ErrorReason} from "./api/getToken.ts"
 
 
 const excerpt: string = `
@@ -29,14 +30,19 @@ function App() {
 
   async function saveCode(formData: FormData): Promise<void> {
     const code = formData.get("code");
-    if (typeof code != "string") return;
+    if (typeof code != "string") return; // seems like a weird handle idk maybe change
     
-    const result: TokenResult = await getToken(code)
-    if (result.ok) {
+    const tokenRes: TokenResult = await getToken(code)
+    if (tokenRes.ok) {
       setCode(code);
-      setError("");
+      setError(""); //maybe call changeErrorMsg instead still up to change
     }
-    else setError(result.reason);
+    else setError(tokenRes.reason);
+  }
+
+  function changeErrorMsg(errorReason: ErrorReason ){
+    const displayedErrorMsg = germanErrorMsg[errorReason]
+    setError(displayedErrorMsg)
   }
 
 
@@ -45,7 +51,7 @@ function App() {
       <ConversationProvider
        onError={(error) => console.error("Conversation error:", error)}
       >
-        {code ? <Agent getToken={getToken}/> : <CodeForm onAction={saveCode}/>}
+        {code ? <Agent getToken={getToken} code={code}/> : <CodeForm onAction={saveCode}/>}
         {error ? <ErrorText error={error}/> : null}
         
       </ConversationProvider>

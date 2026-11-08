@@ -8,6 +8,8 @@ export type TokenResult = {
   reason: "invalid-code" | "server-error" | "network-error" 
 }
 
+export type ErrorReason = "invalid-code" | "server-error" | "network-error" 
+
 export default async function getToken(code: string): Promise<TokenResult> {
     try {
       const res  = await fetch("/api/token", {headers: {"demo-code": code}});

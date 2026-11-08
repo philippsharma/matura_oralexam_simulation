@@ -3,23 +3,35 @@ import {
   useConversationStatus
 } from "@elevenlabs/react"
 
+import type {TokenResult} from "../api/getToken"
 
-export default function Agent({getToken}: {getToken: ()=>Promise<string | null>}){
+type AgentProps = {
+  getToken: (code: string) => Promise<TokenResult>,
+  setError: 
+  code: string
+}
+
+export default function Agent({getToken, code}: AgentProps) {
+
   const {startSession, endSession} = useConversationControls()
   const {status} = useConversationStatus()
 
   async function start() {
-    try {
-      const token = await getToken()
-      if (!token || !(typeof token == "string")) throw new Error
-    } catch {
+    const tokenRes = await getToken(code)
+    if (tokenRes.ok) {
+
+      startSession({conversationToken: tokenRes.token,
+      dynamicVariables: {excerpt: excerpt}})
+    } else {
+
+    }
+    
+
+    } catch (e){
       return
     }
     
     
-    
-    startSession({conversationToken: await getToken(),
-    dynamicVariables: {excerpt: excerpt}
   })}
   
 
