@@ -1,14 +1,15 @@
 
+
+export type TokenFailureReason = "invalid-code" | "server-error" | "network-error" 
+
 export type TokenResult = {
   ok: true,
   token: string
 } | 
 {
   ok: false,
-  reason: "invalid-code" | "server-error" | "network-error" 
+  reason: TokenFailureReason
 }
-
-export type ErrorReason = "invalid-code" | "server-error" | "network-error" 
 
 export default async function getToken(code: string): Promise<TokenResult> {
     try {
