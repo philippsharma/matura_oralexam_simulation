@@ -1,7 +1,7 @@
 export default async function(req: Request) { 
 
     const code = req.headers.get("demo-code")
-    const expected = process.env.ACESS_CODE
+    const expected = process.env.ACCESS_CODE
     if (!expected || code != expected) {
         return new Response("Wrong access code", {status: 401})
     }
