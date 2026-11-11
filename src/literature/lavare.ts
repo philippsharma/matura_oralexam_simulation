@@ -51,7 +51,10 @@ export const lavare: LiteratureWork = {
     {
       name: "Anselme",
       description:
-        "Vieil homme riche à qui Harpagon veut donner Élise. Il se révèle être Dom Thomas d'Alburcy, noble napolitain qui croyait avoir perdu sa famille dans un naufrage ; il retrouve ses enfants Valère et Mariane.",
+        `Vieil homme riche à qui Harpagon veut donner Élise. 
+        Il se révèle être Dom Thomas d'Alburcy, 
+        noble napolitain qui croyait avoir perdu sa famille dans un naufrage ; 
+        il retrouve ses enfants Valère et Mariane.`,
     },
     {
       name: "La Flèche",
@@ -66,12 +69,28 @@ export const lavare: LiteratureWork = {
     {
       name: "Maître Jacques",
       description:
-        "Cuisinier et cocher d'Harpagon. Personnage comique qui change de rôle selon la fonction qu'on lui demande ; par vengeance, il accuse Valère du vol de la cassette.",
+        `Cuisinier et cocher d'Harpagon. Personnage comique qui change de rôle selon la fonction qu'on lui demande ; par vengeance, il accuse Valère du vol de la cassette.`,
     },
   ],
  
   plotSummary:
-    "À Paris, Harpagon, riche bourgeois d'une avarice extrême, a enterré une cassette contenant dix mille écus dans son jardin. Sa fille Élise aime Valère, qui s'est fait engager comme intendant chez lui ; son fils Cléante aime Mariane, une jeune femme pauvre. Harpagon annonce qu'il veut lui-même épouser Mariane, marier Cléante à une riche veuve et donner Élise au vieil Anselme, qui accepte de la prendre « sans dot ». Cléante, qui cherche à emprunter de l'argent à des conditions usuraires, découvre que le prêteur n'est autre que son père. Lors de la visite de Mariane, Cléante, devant son père, lui offre la bague en diamant d'Harpagon. Harpagon découvre par une ruse l'amour de son fils pour Mariane, et le père et le fils se disputent violemment. La Flèche, le valet de Cléante, vole alors la cassette ; Harpagon, désespéré, fait venir un commissaire. Maître Jacques accuse Valère, et un quiproquo s'installe : Valère avoue son amour pour Élise, tandis qu'Harpagon croit qu'il parle du vol. Anselme arrive et se découvre être le père de Valère et de Mariane, qu'il croyait morts dans un naufrage. Cléante obtient de son père le mariage avec Mariane en échange de la cassette ; Anselme paie tous les frais des deux mariages, et Harpagon retrouve avec bonheur sa « chère cassette ».",
+    `À Paris, Harpagon, riche bourgeois d'une avarice extrême, a enterré une cassette contenant dix mille écus,
+     dans son jardin, parce qu'il a très peur qu'on les lui vole. Sa fille Élise aime Valère, un fils de noble napolitain
+     qui s'est fait engager comme intendant chez lui ; son fils Cléante aime Mariane, une jeune femme pauvre. Harpagon
+     annonce qu'il veut lui-même épouser Mariane, marier Cléante à une riche veuve et donner Élise au vieil Anselme, 
+     qui accepte de la prendre « sans dot ». 
+     Cléante, qui cherche à emprunter de l'argent à des conditions usuraires, découvre que le prêteur 
+     n'est autre que son père, donc une dispute violente s'ensuit. Harpagon invite Mariane à dîner 
+     avec l'intention de signer le contrat de marriage. A la suite des demands d'Harpagon de limiter
+     les dépenses, le cuisiner proteste, ce qui est suivi par une vive dispute où Maître Jacques finit a 
+     recevoir des coups de bâton. Lors de la visite de Mariane, Cléante, devant son père, 
+     lui offre la bague en diamant d'Harpagon. Harpagon découvre par une ruse, qui consistait à prétendre d'avoir 
+     changer ses plans et renoncé au mariage, l'amour de son fils pour Mariane. Ensuite, le père et le fils se disputent violemment.
+     La Flèche, le valet de Cléante, vole alors la cassette ; Harpagon, désespéré, fait venir un commissaire. Maître Jacques accuse Valère, 
+     et un quiproquo s'installe : Valère avoue son amour pour Élise, tandis qu'Harpagon croit qu'il parle du vol. 
+     Anselme arrive et se découvre être le père de Valère et de Mariane, qu'il croyait morts dans un naufrage. 
+     Cléante obtient de son père le mariage avec Mariane en échange de la cassette ; 
+     Anselme paie tous les frais des deux mariages, et Harpagon retrouve avec bonheur sa « chère cassette ».`,
  
   literaryMovement:
     "Le classicisme (XVIIe siècle, règne de Louis XIV). Le théâtre classique suit des règles : unité d'action, de temps (une journée) et de lieu (ici, la maison d'Harpagon à Paris), ainsi que la vraisemblance et la bienséance. Il vise à « plaire et instruire » : la comédie doit corriger les mœurs par le rire. Molière en est le maître ; avec L'Avare, il écrit une comédie de caractère et de mœurs, qui s'inspire de la comédie latine (La Marmite de Plaute).",
