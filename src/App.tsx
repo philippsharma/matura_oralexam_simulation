@@ -4,7 +4,7 @@ import './App.css'
 import {ConversationProvider} from "@elevenlabs/react"
 import {useState} from "react"
 
-import Agent from "./components/Agent.tsx"
+import Exam from "./components/Exam.tsx"
 import ErrorText from './components/ErrorText.tsx'
 import CodeForm from "./components/CodeForm.tsx"
 import getToken from "./api/getToken.ts"
@@ -34,7 +34,7 @@ function App() {
       <ConversationProvider
        onError={(error) => console.error("Conversation error:", error)}
       >
-        {code ? <Agent getToken={getToken} code={code} setErrorReason={setErrorReason}/> 
+        {code ? <Exam code={code} getToken={getToken} setErrorReason={setErrorReason}/>
         : <CodeForm onAction={saveCode}/>}
         {errorReason ? <ErrorText errorReason={errorReason}/> : null}
         

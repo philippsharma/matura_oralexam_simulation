@@ -1,4 +1,4 @@
-import type { LiteratureWork } from "./types";
+import type {LiteratureWork } from "./types";
  
 // Draft — to be verified against the text (Wikisource) and reliable sources before use.
 // Points worth double-checking are act and scene numbers and who says what.
@@ -397,4 +397,3 @@ export const lavare: LiteratureWork = {
     },
   ],
 };
- 
