@@ -3,17 +3,18 @@ import {
   useConversationStatus
 } from "@elevenlabs/react"
 
-import type {TokenResult, TokenFailureReason} from "../api/getToken"
+import type {TokenFailureReason} from "../api/getToken"
+import getToken from "../api/getToken"
+import type {ExamContext} from "../literature/types.ts"
 
 
 type AgentProps = {
-  getToken: (code: string) => Promise<TokenResult>,
   setErrorReason: (reason: TokenFailureReason | null) => void, // not exact React usestate typing, but enough for agent.tsx
   code: string, 
-  excerptText: string
+  examContext: ExamContext
 }
 
-export default function Agent({getToken, setErrorReason, code, excerptText}: AgentProps) {
+export default function Agent({setErrorReason, code, examContext}: AgentProps) {
 
   const {startSession, endSession} = useConversationControls()
   const {status} = useConversationStatus()
@@ -24,7 +25,7 @@ export default function Agent({getToken, setErrorReason, code, excerptText}: Age
     if (tokenRes.ok) {
       setErrorReason(null)
       startSession({conversationToken: tokenRes.token,
-      dynamicVariables: {excerpt: excerptText}})
+      dynamicVariables: examContext})
     } else {
       setErrorReason(tokenRes.reason)
     }

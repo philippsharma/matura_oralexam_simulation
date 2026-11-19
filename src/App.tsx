@@ -34,7 +34,7 @@ function App() {
       <ConversationProvider
        onError={(error) => console.error("Conversation error:", error)}
       >
-        {code ? <Exam code={code} getToken={getToken} setErrorReason={setErrorReason}/>
+        {code ? <Exam code={code} setErrorReason={setErrorReason}/>
         : <CodeForm onAction={saveCode}/>}
         {errorReason ? <ErrorText errorReason={errorReason}/> : null}
         
