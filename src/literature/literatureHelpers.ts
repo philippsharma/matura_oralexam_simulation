@@ -33,7 +33,11 @@ export function normalizeWork(work: LiteratureWork): LiteratureWork {
         plotPointBefore: clean(e.connectionToLiteratureWork.plotPointBefore),
         plotPointAfter: clean(e.connectionToLiteratureWork.plotPointAfter),
         significance: clean(e.connectionToLiteratureWork.significance)
-      }
+      },
+      questions: e.questions.map(q => ({
+        question: clean(q.question),
+        answerShouldInclude: q.answerShouldInclude.map(clean)
+      }))
     }))
   }
 }
@@ -66,6 +70,9 @@ export function buildExamContext(work: LiteratureWork, excerpt: Excerpt): ExamCo
     plotPointBefore: excerpt.connectionToLiteratureWork.plotPointBefore,
     plotPointAfter: excerpt.connectionToLiteratureWork.plotPointAfter,
     excerptSignificance: excerpt.connectionToLiteratureWork.significance,
+    excerptQuestions: excerpt.questions
+      .map(q => `- ${q.question}`)
+      .join("\n"),
     questions: work.questions
       .map(q => `- ${q.question}`)
       .join("\n")

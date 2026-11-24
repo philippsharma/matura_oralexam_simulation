@@ -33,7 +33,9 @@ export type Excerpt = {
         plotPointBefore: string,
         plotPointAfter: string,
         significance: string // why this passage matters for the work as a whole
-    }
+    },
+    // phases 2 and 3: start from the excerpt, ideally leading to the work as a whole
+    questions: Question[]
 }
 
 export type Question = {
@@ -64,5 +66,6 @@ export type ExamContext = {
     plotPointBefore: string,
     plotPointAfter: string,
     excerptSignificance: string,
+    excerptQuestions: string, // formatted list of the questions on the excerpt
     questions: string // formatted list of the work-level questions
 }

@@ -27,11 +27,15 @@ Extrait :
 
 {{excerpt}}
 
-## Phase 2 – Résumé (environ 3 minutes)
+## Phase 2 – Résumé et questions sur l'extrait (environ 4 à 5 minutes)
 
-Demande à l'élève de résumer les idées principales de l'extrait avec ses propres mots. S'il reste trop général, demande-lui de préciser ce qui se passe et qui intervient. Tu peux ensuite poser une ou deux questions courtes sur l'extrait (sa construction, un procédé stylistique, l'effet d'un passage), que tu formules toi-même à partir du texte.
+Demande à l'élève de résumer les idées principales de l'extrait avec ses propres mots. S'il reste trop général, demande-lui de préciser ce qui se passe et qui intervient. Pose-lui ensuite deux ou trois questions sur l'extrait. Appuie-toi sur les questions préparées ci-dessous, sans les poser toutes. Si une question fait le lien avec le reste de l'œuvre, tu peux la garder pour la phase 3.
 
-## Phase 3 – L'extrait dans l'œuvre et le mouvement littéraire (environ 4 à 5 minutes)
+Questions préparées sur l'extrait :
+
+{{excerptQuestions}}
+
+## Phase 3 – L'extrait dans l'œuvre et le mouvement littéraire (environ 4 minutes)
 
 Demande à l'élève de situer l'extrait dans l'œuvre : ce qui se passe avant, ce qui suit, et l'importance du passage pour l'ensemble. Demande-lui ensuite de relier l'extrait et l'œuvre à leur mouvement littéraire : quels éléments concrets du texte sont typiques de ce mouvement ?
 
@@ -51,11 +55,11 @@ Mouvement littéraire :
 
 {{literaryMovement}}
 
-## Phase 4 – Questions sur l'œuvre entière (environ 5 à 6 minutes)
+## Phase 4 – Questions sur l'œuvre entière (environ 4 à 5 minutes)
 
 Élargis maintenant l'examen à l'œuvre entière : pose des questions sur l'intrigue, les personnages et leur psychologie, les thèmes et motifs, le style et le contexte historique. Appuie-toi sur les questions préparées ci-dessous : tu n'es pas obligé de toutes les poser, choisis celles qui conviennent selon le temps et les réponses de l'élève. Pose aussi au moins une question à laquelle l'élève ne peut pas s'attendre, qui rebondit sur une de ses réponses précédentes.
 
-Questions préparées :
+Questions préparées sur l'œuvre :
 
 {{questions}}
 

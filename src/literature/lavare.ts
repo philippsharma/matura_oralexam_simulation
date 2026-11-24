@@ -230,6 +230,48 @@ export const lavare: LiteratureWork = {
         significance:
           "Point culminant de la pièce : ce qu'Harpagon craignait depuis le début se réalise. Le monologue montre son avarice à l'extrême, à la fois comique et proche de la folie : l'argent a pris la place des êtres humains. Le vol prépare aussi le dénouement : il provoque l'enquête et le quiproquo avec Valère, et permet à Cléante d'échanger la cassette contre le mariage avec Mariane.",
       },
+      questions: [
+        {
+          question:
+            "Dans le monologue, la gradation est utilisée plusieurs fois. Quelle est sa définition et quel effet provoque-t-elle?",
+          answerShouldInclude: [
+            "La gradation consiste en une énumération de mots selon une progression d'intensité croissante (gradation ascendante) ou décroissante (gradation descendante).",
+            "La gradation peut créer un effet d'amplification par la répétition de la même idée avec une variation de force, dirigeant vers l'idée finale.",
+            "Dans le cas d'une gradation ascendante, elle peut être utilisée pour l'hyperbole.",
+          ],
+        },
+        {
+          question:
+            "Trouvez quelques exemples de la gradation dans le monologue.",
+          answerShouldInclude: [
+            "Au voleur ! au voleur ! à l'assassin ! au meurtrier !",
+            "Je suis perdu, je suis assassiné ! On m'a coupé la gorge, on m'a dérobé mon argent !",
+            "C'en est fait, je n'en puis plus, je me meurs, je suis mort, je suis enterré !",
+          ],
+        },
+        {
+          question:
+            "En quoi ce monologue est-il comique ? En quoi est il à la même fois aussi inquiétant ? Appuyez-vous sur des exemples précis du texte.",
+          answerShouldInclude: [
+            "Comique de l'exagération : Harpagon parle du vol comme d'un meurtre (« je suis assassiné », « on m'a coupé la gorge ») et se déclare mort et enterré.",
+            "Comique de gestes : il se prend lui-même par le bras en croyant tenir le voleur (« Rends-moi mon argent, coquin… Ah ! c'est moi ! »).",
+            "Il parle à son argent comme à une personne aimée (« mon pauvre argent ! mon cher ami ! », « Sans toi, il m'est impossible de vivre ») : c'est comique par la disproportion, mais aussi inquiétant, car l'argent a pris chez lui la place des sentiments humains.",
+            "Il perd la raison et ne sait plus qui il est : « j'ignore où je suis, qui je suis, et ce que je fais ».",
+            "Sa paranoïa devient violente : il soupçonne tout le monde, veut faire torturer toute sa maison, y compris ses enfants et lui-même, et « faire pendre tout le monde ».",
+            "Le rire a une dimension morale : il montre que l'avarice déshumanise et peut mener à la folie.",
+          ],
+        },
+        {
+          question:
+            "Aux lignes 23 à 28 de la scène 7, Harpagon emploie les pronoms « on », « vous » et « ils » : à qui renvoient-ils ? Et comment expliquer les rires ?",
+          answerShouldInclude: [
+            "Les trois pronoms renvoient au public : Harpagon s'adresse directement aux spectateurs, ce qui brise le « quatrième mur ».",
+            "Le public rit à cause de la surprise d'être adressé directement.",
+            "Le public rit parce qu'Harpagon est ridicule : son désespoir exagéré et sa paranoïa le poussent à soupçonner tout le monde, jusqu'aux spectateurs eux-mêmes.",
+            "Harpagon interprète ces rires comme une preuve de complicité dans le vol, ce qui renforce encore l'effet comique.",
+          ],
+        },
+      ],
     },
 
     {
@@ -286,6 +328,35 @@ export const lavare: LiteratureWork = {
         significance:
           "Première apparition de Mariane, dont on n'avait fait que parler : on découvre ses sentiments et sa répugnance pour ce mariage. La scène oppose le mariage d'intérêt, défendu par Frosine, au mariage d'amour, thème central de la pièce. Elle repose sur l'ironie dramatique : le public sait que le jeune homme est Cléante, le fils d'Harpagon, alors que Mariane l'ignore. Elle prépare ainsi la rencontre avec Harpagon et la rivalité ouverte entre le père et le fils.",
       },
+      questions: [
+        {
+          question:
+            "Qui est le 'jeune blondin' dont parle Mariane, et que sait le spectateur que Mariane ignore?",
+          answerShouldInclude: [
+            "Il s'agit de Cléante, mais Mariane ne sait pas qui il est : « je ne sais point quel il est ».",
+            "Le spectateur sait que c'est le fils d'Harpagon : c'est une ironie dramatique.",
+          ],
+        },
+        {
+          question:
+            
+           "Quels arguments Frosine avance-t-elle pour convaincre Mariane d'épouser Harpagon ? Que révèlent-ils de son caractère ?",
+          answerShouldInclude: [
+            "Les jeunes gens séduisants sont souvent pauvres (« gueux comme des rats »), alors qu'un vieux mari apporte la richesse.",
+            "Harpagon mourra bientôt et Mariane, devenue veuve, pourra épouser un homme plus aimable.",
+            "Frosine propose une idée de mariage très matérialiste avec un raisonnement cynique. ",
+          ],
+        },
+        {
+          question:
+            "Expliquez les contrastes entre les propos de Mariane et de Frosine.",
+          answerShouldInclude: [
+            "Pour Mariane, le mariage devrait reposer sur l'inclination ; pour Frosine, c'est une affaire d'argent.",
+            "Mariane exprime son malaise face à l'idée de devoir attendre la mort de quelqu'un pour être heureuse, tandis que Frosine ne semble pas avoir un problème avec cette idée.",
+            "Mariane a encore une vue de mariage très innocente et pure, tandis que Frosine semble être plus 'froide', mais peut-être plus réaliste.",
+          ],
+        },
+      ],
     },
 
     {
@@ -384,6 +455,58 @@ export const lavare: LiteratureWork = {
         significance:
           "La scène montre dès le premier acte le caractère d'Harpagon : il sacrifie le bonheur de sa fille à l'argent et vit dans la peur d'être volé, ce qui annonce le vol de la cassette. Elle met en place l'obstacle au mariage d'Élise et de Valère ainsi que la stratégie de Valère, la flatterie. La répétition de « sans dot » est un exemple célèbre du comique de mots et illustre la critique du mariage d'intérêt.",
       },
+      questions: [
+        {
+          question:
+            "Pourquoi Valère donne-t-il raison à Harpagon avant même de savoir de quoi il s'agit ? Dans quelle situation se trouve-t-il ?",
+          answerShouldInclude: [
+            "Valère aime Élise en secret et s'est fait engager comme intendant d'Harpagon pour rester près d'elle.",
+            "Sa stratégie est la flatterie : il approuve tout ce que dit Harpagon pour gagner sa confiance (« vous ne sauriez avoir tort, et vous êtes toute raison »).",
+            "Il est pris dans un dilemme : il doit défendre Élise, donc son propre amour, sans contredire son maître.",
+          ],
+        }, 
+        {
+          question:
+            "Harpagon répète plusieurs fois « sans dot ». De quel type de comique s'agit-il, et que révèle cette répétition sur le personnage ?",
+          answerShouldInclude: [
+            "C'est un comique de mots, fondé sur la répétition mécanique de la même réplique.",
+            "Harpagon n'écoute aucun argument : « sans dot » est pour lui une raison qui répond à tout.",
+            "L'argent compte plus pour lui que le bonheur de sa fille : c'est aussi un comique de caractère, qui montre son avarice.",
+          ],
+        },
+        {
+          question:
+            "Comment Valère essaie-t-il malgré tout de défendre Élise ? Quels arguments avance-t-il contre ce mariage ?",
+          answerShouldInclude: [
+            "Il commence chaque réplique par approuver Harpagon, puis il ajoute une objection.",
+            "Il ne présente jamais les objections comme les siennes : « elle pourrait vous dire », « il y a des gens qui pourraient vous dire », « quantité de pères ».",
+            "Ses arguments : le mariage est trop précipité, il faut tenir compte de l'inclination de la fille, le bonheur de toute une vie est en jeu, et la différence d'âge est trop grande.",
+          ],
+        },
+        {
+          question:
+            "Relevez quelques répliques de Valère où l'ironie apparaît. Que pense-t-il en réalité ? Harpagon est-il dupe ?",
+          answerShouldInclude: [
+            "« voilà une raison tout à fait convaincante ; il se faut rendre à cela »",
+            "« Assurément ; cela ne reçoit point de contradiction »",
+            "« Voilà qui décide tout ; cela s’entend »",
+            "« Ah ! il n’y a pas de réplique à cela, on le sait bien ! »",
+            "« Il est vrai. Cela ferme la bouche à tout. Sans dot ! Le moyen de résister à une raison comme celle-là ! »",
+            "« Qui diantre peut aller là-contre ? »",
+            "En réalité, Valère trouve que « sans dot » n'est pas une raison valable : il est opposé à ce mariage, parce qu'il aime Élise et pense qu'un mariage doit tenir compte de l'inclination.",
+            "Harpagon est dupe : il n'entend que l'approbation et ne remarque pas l'ironie, car il est aveuglé par son avarice.",
+          ],
+        },
+        {
+          question:
+            "Que montre la dernière réplique d'Harpagon, quand il croit entendre un chien aboyer ?",
+          answerShouldInclude: [
+            "Harpagon pense tout de suite que quelqu'un veut voler son argent : il est méfiant jusqu'à la paranoïa.",
+            "Il interrompt une discussion sur le mariage de sa fille pour aller surveiller son trésor : l'argent passe avant sa famille.",
+            "Cette inquiétude annonce le vol de la cassette à l'acte IV.",
+          ],
+        },
+      ],
     },
   ],
 };
