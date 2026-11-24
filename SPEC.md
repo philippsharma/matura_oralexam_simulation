@@ -72,3 +72,6 @@ Notes:
 
 - Author background: 
 In context files, there is no separate field for more in-depth information about the author. The RFSM mentions the author only in the Programm ("Fähigkeit, Beziehungen zum Autor/zur Autorin und seiner/ihrer Zeit herzustellen", 2.4.4.1), not in theoral exam phases (2.4.2.2) or the oral grading criteria (2.4.3.2). Links to the author are therefore covered within `historicalBackground` and, where useful, in individual questions.
+
+- Excerpt questions:
+From the description of the phases of the oral exam (2.4.2.2), it's not clear whether the student should be asked questions which are specific to the *excerpt*. Phase 3 only describes "making connections between excerpt and the whole work, and the literary current" and does not mention questions explicity, unlike phase 4. However, it makes sense to ask excerpt-specific questions, since the student gets 15 minutes of preparation time to read the excerpt. Answering question about it would has more educational value than solely summarizing and situating it within the plot of the work. Thus, I have decided to include excerpt-level questions which will be asked during phase 3, interpreting "making connections between excerpt, whole work and literary current" as also answering excerpt-specific questions.
