@@ -15,19 +15,22 @@ Features: Must have
 
 Features: Maybe
 
-- Literature work stored as a whole for more context and thus more accurate examination
-- More elaborate grading criteria which goes beyond RFSM, maybe based no CEFR
-- Assuring consistency through descriptions for different grade levels
+more likely:
+- Self insert Excerpt and literature work context -> very good idea, probably I'll implement. Else not realistic that I supply all the context files for different literature works.
+- Assuring consistency through descriptions for different grade levels -> good idea, will probably be part of grading rubric
 - "hold to think" button 
-- Fluency evaluation: would need evaluation of voice, not only transcript (approaches: sending audio to different model, timing-based calculations)
-- Showing language errors during interaction
-- Self insert Excerpt and literature work context
-- Highlighting and notes on excerpt in preparation phase
 - Include advanced level sequence ("erweitertes Niveau" )
+
+less likely:
+- More elaborate grading criteria which goes beyond RFSM, maybe based no CEFR -> probably not. Better to inform grading through work with actual teachers. 
+- Fluency evaluation: would need evaluation of voice, not only transcript (approaches: sending audio to different model, timing-based calculations) -> probably not, out of scope
+- Showing language errors during interaction -> in a later stage, not really that useful
+- Highlighting and notes on excerpt in preparation phase -> the excerpt is actually not really the focus in the exam, it's more about connection to the work, high-level ideas etc. So maybe leave out. 
+
 
 Features: cut
 
-- Accounts
+- Accounts -> although would be useful if inserting own context is possible...
 - Progress tracking
 - Optional Questions about other works or other topics chosen by the examiner (not implemented from 2.4.2.2)
 - Multiple languages
@@ -63,5 +66,9 @@ Plot, Characters, Themes and Motives, historical background, stylistic features
 
 Output: Each of the three criterions graded 1-6, half steps. A short explanation text for each outcome, using excerpts from the trannscript as evicence. Summary grade 1-6, rounded to nearest 0.5. >= 4 -> pass. Weighting (not based on RFSM): Language skills: 40%; Knowledge of chosen literature work: 40%; Ability to understand impulses and questions: 20%;
 
-
 Privacy: Hume stores audio when data retention is on 
+
+Notes:
+
+- Author background: 
+In context files, there is no separate field for more in-depth information about the author. The RFSM mentions the author only in the Programm ("Fähigkeit, Beziehungen zum Autor/zur Autorin und seiner/ihrer Zeit herzustellen", 2.4.4.1), not in theoral exam phases (2.4.2.2) or the oral grading criteria (2.4.3.2). Links to the author are therefore covered within `historicalBackground` and, where useful, in individual questions.

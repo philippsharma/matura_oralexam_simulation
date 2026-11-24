@@ -4,6 +4,7 @@ import type {Excerpt, ExamContext, LiteratureWork} from "./types.ts"
 const clean = (s: string) => s.replace(/\s+/g, " ").trim()
 
 // returns a copy of the work with all texts cleaned, except excerpt.text, whose line breaks are part of the text
+// feels kinda long-winded, maybe change later on
 export function normalizeWork(work: LiteratureWork): LiteratureWork {
   return {
     id: work.id,
@@ -20,18 +21,19 @@ export function normalizeWork(work: LiteratureWork): LiteratureWork {
     historicalBackground: clean(work.historicalBackground),
     stylisticAspects: clean(work.stylisticAspects),
     themesAndMotifs: work.themesAndMotifs.map(clean),
+    questions: work.questions.map(q => ({
+      question: clean(q.question),
+      answerShouldInclude: q.answerShouldInclude.map(clean)
+    })),
     excerpts: work.excerpts.map(e => ({
       id: e.id,
       text: e.text,
-      placeInLiteratureWork: {
-        location: clean(e.placeInLiteratureWork.location),
-        plotPointBefore: clean(e.placeInLiteratureWork.plotPointBefore),
-        plotPointAfter: clean(e.placeInLiteratureWork.plotPointAfter)
-      },
-      questions: e.questions.map(q => ({
-        question: clean(q.question),
-        answerShouldInclude: q.answerShouldInclude.map(clean)
-      }))
+      connectionToLiteratureWork: {
+        location: clean(e.connectionToLiteratureWork.location),
+        plotPointBefore: clean(e.connectionToLiteratureWork.plotPointBefore),
+        plotPointAfter: clean(e.connectionToLiteratureWork.plotPointAfter),
+        significance: clean(e.connectionToLiteratureWork.significance)
+      }
     }))
   }
 }
@@ -60,10 +62,11 @@ export function buildExamContext(work: LiteratureWork, excerpt: Excerpt): ExamCo
       .map(t => `- ${t}`)
       .join("\n"),
     excerpt: excerpt.text,
-    excerptLocation: excerpt.placeInLiteratureWork.location,
-    plotPointBefore: excerpt.placeInLiteratureWork.plotPointBefore,
-    plotPointAfter: excerpt.placeInLiteratureWork.plotPointAfter,
-    questions: excerpt.questions
+    excerptLocation: excerpt.connectionToLiteratureWork.location,
+    plotPointBefore: excerpt.connectionToLiteratureWork.plotPointBefore,
+    plotPointAfter: excerpt.connectionToLiteratureWork.plotPointAfter,
+    excerptSignificance: excerpt.connectionToLiteratureWork.significance,
+    questions: work.questions
       .map(q => `- ${q.question}`)
       .join("\n")
   }
