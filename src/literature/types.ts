@@ -34,7 +34,7 @@ export type Excerpt = {
         plotPointAfter: string,
         significance: string // why this passage matters for the work as a whole
     },
-    // phases 2 and 3: start from the excerpt, ideally leading to the work as a whole
+    // phase 3: start from the excerpt, ideally leading to the work as a whole
     questions: Question[]
 }
 

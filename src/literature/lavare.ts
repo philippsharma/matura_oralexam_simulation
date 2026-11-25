@@ -233,20 +233,12 @@ export const lavare: LiteratureWork = {
       questions: [
         {
           question:
-            "Dans le monologue, la gradation est utilisée plusieurs fois. Quelle est sa définition et quel effet provoque-t-elle?",
+            "Relevez des exemples de gradation dans le monologue. Quel effet produisent-ils ?",
           answerShouldInclude: [
-            "La gradation consiste en une énumération de mots selon une progression d'intensité croissante (gradation ascendante) ou décroissante (gradation descendante).",
-            "La gradation peut créer un effet d'amplification par la répétition de la même idée avec une variation de force, dirigeant vers l'idée finale.",
-            "Dans le cas d'une gradation ascendante, elle peut être utilisée pour l'hyperbole.",
-          ],
-        },
-        {
-          question:
-            "Trouvez quelques exemples de la gradation dans le monologue.",
-          answerShouldInclude: [
-            "Au voleur ! au voleur ! à l'assassin ! au meurtrier !",
-            "Je suis perdu, je suis assassiné ! On m'a coupé la gorge, on m'a dérobé mon argent !",
-            "C'en est fait, je n'en puis plus, je me meurs, je suis mort, je suis enterré !",
+            "Exemple : « Au voleur ! au voleur ! à l'assassin ! au meurtrier ! »",
+            "Exemple : « Je suis perdu, je suis assassiné ; on m'a coupé la gorge : on m'a dérobé mon argent »",
+            "Exemple : « C'en est fait ; je n'en puis plus ; je me meurs ; je suis mort ; je suis enterré »",
+            "Effet : la même idée est répétée avec une force croissante, ce qui crée une amplification jusqu'à l'hyperbole.",
           ],
         },
         {
@@ -263,7 +255,7 @@ export const lavare: LiteratureWork = {
         },
         {
           question:
-            "Aux lignes 23 à 28 de la scène 7, Harpagon emploie les pronoms « on », « vous » et « ils » : à qui renvoient-ils ? Et comment expliquer les rires ?",
+            "Vers la fin du monologue, Harpagon emploie les pronoms « on », « vous » et « ils » : à qui renvoient-ils ? Et comment expliquer les rires ?",
           answerShouldInclude: [
             "Les trois pronoms renvoient au public : Harpagon s'adresse directement aux spectateurs, ce qui brise le « quatrième mur ».",
             "Le public rit à cause de la surprise d'être adressé directement.",

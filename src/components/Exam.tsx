@@ -14,28 +14,34 @@ type ExamProps = {
   setErrorReason: (reason: TokenFailureReason | null) => void;
 }
 
+type ExamStage = "idle" | "preparation" | "exam" | "finished"
 
 export default function Exam({code, setErrorReason}: ExamProps) {
 
+  const [stage, setStage] = useState<ExamStage>("idle")
   const [excerpt, setExcerpt] = useState<Excerpt | null>(null)
   const [currentWork] = useState<LiteratureWork>(() => normalizeWork(lavare)) //later choosable work, but now lavare
 
  
 
-  function startExam(): void {
+  function startPreparation(): void {
     setExcerpt(getRandomExcerpt(currentWork))
+    setStage("preparation")
   }
 
   return (
     <>
-      <button onClick={startExam}>Start exam</button>
+      {stage === "idle" && <button onClick={startPreparation}>Start preparation</button>}
       {excerpt && (
         <>
-          <Agent code={code} setErrorReason={setErrorReason} examContext={buildExamContext(currentWork, excerpt)}/>
-          <Display excerptText={excerpt.text}/>
+          {stage === "preparation" && <button onClick={() => setStage("exam")}>Start exam</button>}
+          {stage === "exam" && (
+            <Agent code={code} setErrorReason={setErrorReason} examContext={buildExamContext(currentWork, excerpt)}/>
+          )}
+          {(stage === "preparation" || stage === "exam") && <Display excerptText={excerpt.text}/>}
         </>
       )}
-      
+      {stage === "finished" && <p>Exam finished</p>}
     </>
   )
 }
