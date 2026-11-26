@@ -34,11 +34,12 @@ export default function Exam({code, setErrorReason}: ExamProps) {
       {stage === "idle" && <button onClick={startPreparation}>Start preparation</button>}
       {excerpt && (
         <>
-          {stage === "preparation" && <button onClick={() => setStage("exam")}>Start exam</button>}
-          {stage === "exam" && (
-            <Agent code={code} setErrorReason={setErrorReason} examContext={buildExamContext(currentWork, excerpt)}/>
-          )}
-          {(stage === "preparation" || stage === "exam") && <Display excerptText={excerpt.text}/>}
+          {(stage === "preparation" || stage === "exam") && (
+            <>
+              <Agent code={code} setErrorReason={setErrorReason} setStage={setStage} examContext={buildExamContext(currentWork, excerpt)}/>
+              <Display excerptText={excerpt.text}/>
+            </>
+            )}
         </>
       )}
       {stage === "finished" && <p>Exam finished</p>}
